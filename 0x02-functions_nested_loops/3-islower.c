@@ -4,7 +4,7 @@
  * _islower - function to print lowercase
  *
  * @c: parameter to be printed
- * Return: 1 if it is lowercase 
+ * Return: 1 if it is lowercase
  * and 0 if otherwise
  */
 
