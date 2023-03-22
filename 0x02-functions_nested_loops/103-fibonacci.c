@@ -2,36 +2,22 @@
 
 /**
  * main - prints the sum of even valued Fibonacci numbers to 4million
- * Return: 0 when unsuccessful
+ * Return: void
  */
 
 int main(void)
 {
-        int count = 3;
+	int i = 0;
+	long j = 1, k = 2, sum = k;
 
-        long int first = 1, second = 2;
-        long int next = first + second;
-
-        printf("%lu, ", first);
-        printf("%lu, ", second);
-        while (count <= 50)
-        {
-                if (count == 50)
-                {
-                        printf("%lu\n", next);
-                }
-                else
-                {
-                        printf("%lu, ", next);
-                }
-                first = second;
-                second = next;
-
-                next = first + second;
-		sum =
-		if (count <= 4000000, count ++)
-		{
-			print
-        }
-        return (0);
+	while (k + j < 4000000)
+	{
+		k += j;
+		if (k % 2 == 0)
+			sum += k;
+		j = k - j;
+		++i;
+	}
+	printf("%ld\n", sum);
+	return (0);
 }
