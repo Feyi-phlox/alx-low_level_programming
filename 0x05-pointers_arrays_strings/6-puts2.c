@@ -2,7 +2,7 @@
 
 /**
  * puts2 - prints every other character of a string
- *@str: parameter to be pinted
+ *@str: parameter to be printed
  * Return: always 0
  */
 
