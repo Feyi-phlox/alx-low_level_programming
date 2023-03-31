@@ -11,15 +11,15 @@ char *leet(char *str)
 	int i;
 	int j;
 
-	char *a = "aAeEoOtTlL";
-	char *b = "4433007711";
+	char aa[] = "aAeEoOtTlL";
+	char bb[] = "4433007711";
 
 	for (i = 0 ; str[i] != '\0' ; j++)
 	{
-		for (j = 0 ; a[j] != '\0' ; j++)
+		for (j = 0 ; aa[j] != '\0' ; j++)
 		{
-			if (str[i] == a[j])
-				str[i] = b[j];
+			if (str[i] == aa[j])
+				str[i] = bb[j];
 		}
 	}
 	return (str);
