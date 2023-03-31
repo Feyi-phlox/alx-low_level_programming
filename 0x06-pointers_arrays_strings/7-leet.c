@@ -10,11 +10,10 @@ char *leet(char *str)
 {
 	int i;
 	int j;
-
 	char aa[] = "aAeEoOtTlL";
 	char bb[] = "4433007711";
 
-	for (i = 0 ; str[i] != '\0' ; j++)
+	for (i = 0 ; str[i] != '\0' ; i++)
 	{
 		for (j = 0 ; aa[j] != '\0' ; j++)
 		{
