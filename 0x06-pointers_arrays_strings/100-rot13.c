@@ -10,17 +10,17 @@ char *rot13(char *str)
 {
 	int i;
 	int j;
-	char *a = "ABCEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char *b = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char Aa[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char Bb[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (i = 0 ; str[i] != '\0' ; i++)
 	{
-		for (j = 0 ; a[j] != '\0' ; j++)
+		for (j = 0 ; Aa[j] != '\0' ; j++)
 		{
-			if (str[i] == a[j])
+			if (str[i] == Aa[j])
 			{
-				str[i] = b[j];
-				;
+				str[i] = Bb[j];
+				break;
 			}
 		}
 	}
