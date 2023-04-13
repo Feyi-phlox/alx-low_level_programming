@@ -32,11 +32,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		stringconcat[a] = s1[a];
 		a++;
 	}
-	while (b < n)
-	{
-		stringconcat[a + b] = s2[b];
-			b++;
-	}
+	while (n < len2 && a < (len1 + n))
+		stringconcat[a++] = s2[b++];
+
+	while (n >= len2 && a < (len2 + len1))
+		stringconcat[a++] = s2[b++];
+
 	stringconcat[a + b] = '\0';
+
 	return (stringconcat);
 }
