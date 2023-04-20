@@ -1,6 +1,7 @@
 #ifndef CALC_H
 #define CALC_H
 
+#include "function_pointers.h"
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
