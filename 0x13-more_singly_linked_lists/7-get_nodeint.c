@@ -5,7 +5,7 @@
  * of a listint_t linked list
  * @head: pointer to the address of the first node
  * @index: index of node starting at 0
- * Return: nth node or NULL if unsycessful
+ * Return: nth node or NULL if unsucessful
  */
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
@@ -13,13 +13,11 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	unsigned int i = 0;
 	listint_t *node = head;
 
-	if (!node)
-		return (NULL);
-
-	while (node && i == index)
+	while (node && i < index)
 	{
 		node = node->next;
 		i++;
+		return (node);
 	}
-	return (node);
+	return (NULL);
 }
