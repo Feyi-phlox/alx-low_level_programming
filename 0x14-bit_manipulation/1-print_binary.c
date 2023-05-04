@@ -9,17 +9,24 @@
 void print_binary(unsigned long int n)
 {
 	int i = sizeof(unsigned int) * 8 - 1;
+	int no_zero = 0;
 
 	for (; i >= 0; i--)
 	{
-		if (~n & (1u << i))
+		if (n & (1u << i))
+		{
+			putchar('1');
+			no_zero = 1;
+		}
+		else if (no_zero)
 		{
 			putchar('0');
 		}
-		else
-		{
-			putchar('1');
-		}
 	}
+	if (!no_zero)
+	{
+		putchar('0');
+	}
+
 	/*printf("\n");*/
 }
