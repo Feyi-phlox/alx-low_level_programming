@@ -8,26 +8,23 @@
 
 void print_binary(unsigned long int n)
 {
-	int i = sizeof(unsigned int) * 8 - 1;
+	int i;
 	int no_zero = 0;
 	unsigned long int convert;
 
-	if (n == 0)
-	{
-		_putchar('0');
-	}
-
 	for (i = sizeof(unsigned int) * 8 - 1; i >= 0; i--)
 	{
-		convert = 1 << i;
-		if ((n & convert) == convert)
+		convert = n >> i;
+		if (convert & 1)
 		{
 			_putchar('1');
-			no_zero = 1;
+			no_zero++;
 		}
 		else if (no_zero)
 		{
 			_putchar('0');
 		}
 	}
+	if (!no_zero)
+		_putchar('0');
 }
