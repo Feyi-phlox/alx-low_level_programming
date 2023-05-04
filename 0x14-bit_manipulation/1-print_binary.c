@@ -17,7 +17,7 @@ void print_binary(unsigned long int n)
 		_putchar('0');
 	}
 
-	for (; i >= 0; i--)
+	for (i = sizeof(unsigned int) * 8 - 1; i >= 0; i--)
 	{
 		convert = 1 << i;
 		if ((n & convert) == convert)
