@@ -15,12 +15,15 @@ void print_binary(unsigned long int n)
 	{
 		if (n & (1u << i))
 		{
-			putchar('1');
 			no_zero = 1;
+			putchar('1');
 		}
-		else if (no_zero)
+		else
 		{
-			putchar('0');
+			if (no_zero)
+			{
+				putchar('0');
+			}
 		}
 	}
 	if (!no_zero)
