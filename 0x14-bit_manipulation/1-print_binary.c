@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 	int no_zero = 0;
 	unsigned long int convert;
 
-	for (i = sizeof(unsigned int) * 8 - 1; i >= 0; i--)
+	for (i = sizeof(unsigned long int) * 8 - 1; i >= 0; i--)
 	{
 		convert = n >> i;
 		if (convert & 1)
